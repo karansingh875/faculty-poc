@@ -34,15 +34,15 @@ function App() {
     loading ? <h4 color="red">please wait while we are fetching the location...</h4> : <>
       <button onClick={getLocation}>Show your location</button>
 
-      <h3>
+      {longitude && <h3>
         Longitude: {longitude}
-      </h3>
-      <h3>
+      </h3>}
+      {latitude && <h3>
         lattitude: {latitude}
-      </h3>
-      <h3>
+      </h3>}
+      {error && <h3>
         Error: {error}
-      </h3>
+      </h3>}
     </>
   );
 }
